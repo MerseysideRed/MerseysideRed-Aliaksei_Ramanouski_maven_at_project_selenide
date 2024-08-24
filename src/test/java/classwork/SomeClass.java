@@ -19,9 +19,10 @@ public class SomeClass {
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://booking.com");
-        try{
+        try {
             driver.findElement(By.xpath("//div[@role='dialog']//button")).click();
-        }catch (NoSuchElementException e){}
+        } catch (NoSuchElementException e) {
+        }
         WebElement city = driver.findElement(By.name("ss"));
         city.clear();
         city.sendKeys("Paris");
@@ -68,8 +69,7 @@ public class SomeClass {
 
         String actualMaxPriceText = driver
                 .findElements(By.xpath("//div[@id='search_results_table']//div[@data-testid='property-card'][1]//div[contains(@data-testid, 'price')]/span"))
-                .stream().reduce((x,y) -> y).get().getText();
-
+                .stream().reduce((x, y) -> y).get().getText();
 
 
         int actualMaxPrice = Integer.parseInt(actualMaxPriceText.replaceAll("\\D+", ""));

@@ -6,7 +6,6 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class BasePage {
 
-
     public static void navigateToURL(String urlString) {
 
         Configuration.browser = "chrome";

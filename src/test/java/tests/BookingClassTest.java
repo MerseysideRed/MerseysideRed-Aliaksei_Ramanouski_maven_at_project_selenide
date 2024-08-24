@@ -27,7 +27,7 @@ public class BookingClassTest extends BaseTest {
         bookingMainPage = new MainPage();
         bookingSearchResultsPage = new SearchResultsPage();
         propertyPage = new PropertyPage();
-    };
+    }
 
     @Test
     public void testCorrectPropertyRate() {
@@ -89,7 +89,8 @@ public class BookingClassTest extends BaseTest {
         LOGGER.debug("Test testLanguageTooltipValue is completed");
     }
 
-    @Test public void testCorrectPropertyScoreRate() throws InterruptedException {
+    @Test
+    public void testCorrectPropertyScoreRate() throws InterruptedException {
 
         navigateToURL("https://www.booking.com/");
         bookingMainPage.closeSignInWindow();

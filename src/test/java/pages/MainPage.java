@@ -10,7 +10,7 @@ import java.time.format.DateTimeFormatter;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class MainPage extends BasePage{
+public class MainPage extends BasePage {
 
     private static final Logger LOGGER = LogManager.getLogger(MainPage.class);
 
@@ -27,8 +27,8 @@ public class MainPage extends BasePage{
 
 
     public void closeSignInWindow() {
-            WebElement buttonCLoseSignInPopUp = $x(BUTTON_CLOSE_SIGN_IN_POPUP).shouldBe(Condition.visible);
-            buttonCLoseSignInPopUp.click();
+        WebElement buttonCLoseSignInPopUp = $x(BUTTON_CLOSE_SIGN_IN_POPUP).shouldBe(Condition.visible);
+        buttonCLoseSignInPopUp.click();
 
         LOGGER.trace("Close Sign-in window is performed, locator: //button[@aria-label='Dismiss sign-in info.']");
     }
